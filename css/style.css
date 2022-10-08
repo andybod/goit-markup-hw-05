@@ -131,19 +131,17 @@ body {
   color: var(--hover-color);
   position: relative;
 }
-.current::after {
+.current::before {
   content: '';
-  width: 48px;
+  width: 100%;
   height: 4px;
   background: var(--hover-color);
   position: absolute;
   left: 0;
-  top: 46px;
+  bottom: -33px;
   border-radius: 2px;
 }
-.header__link::after .current {
-  background: var(--hover-color);
-}
+
 .header__contacts {
   display: flex;
   margin-left: auto;
@@ -257,8 +255,20 @@ body {
   gap: 30px;
 }
 .work__item {
+  position: relative;
 }
 .work__img {
+}
+.work__text {
+  width: 100%;
+  padding: 27px 0px;
+  background: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-bright-color);
+  position: absolute;
+  bottom: 0;
 }
 
 /* -------------------------------------Teams------------------------------------------------------- */
@@ -492,7 +502,7 @@ body {
 .gallery-portfolio__link {
   display: block;
   text-decoration: none;
-  transform: box-shadow var(--transition-hover);
+  transition: box-shadow var(--transition-hover);
 }
 .gallery-portfolio__link:hover,
 .gallery-portfolio__link:focus {
